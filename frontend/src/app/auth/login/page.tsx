@@ -1,6 +1,6 @@
 "use client"
 
-import { authClient } from "@/app/lib/auth";
+import { authClient } from "@/lib/auth";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";

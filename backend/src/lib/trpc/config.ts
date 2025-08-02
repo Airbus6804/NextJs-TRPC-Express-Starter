@@ -18,7 +18,7 @@ export const createTRPCContext = async (opts: CreateExpressContextOptions) => {
     const {payload} = await jwtVerify<JwtPayload>(token, JWKS)
     user = payload;
   } catch (error) {
-    console.error(error)
+    // console.error(error)
   }
 
   const source = opts.req.headers['x-trpc-source'] ?? 'unknown'

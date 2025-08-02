@@ -1,6 +1,6 @@
 
 
-import { serverClient } from "./lib/trpc/server";
+import { serverClient } from "../lib/trpc/server";
 
 export default async function Home() {
   const trpc = await serverClient();
