@@ -2,6 +2,7 @@
 
 ### 🛠️ Tech Stack: Next.js + Express + tRPC + Better Auth + Drizzle + ShadCN
 
+#### ❗Before building the frontend remove reference from frontend/tsconfig.json
 ---
 
 This starter kit includes a **monorepo** setup with:

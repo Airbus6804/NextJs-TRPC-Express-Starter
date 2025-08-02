@@ -25,9 +25,9 @@
       "#/*": ["../*"]
     } 
   },
-  "references": [
-    { "path": "../backend"}
-  ],
+  // "references": [
+  //   { "path": "../backend"}
+  // ],
 
 
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
