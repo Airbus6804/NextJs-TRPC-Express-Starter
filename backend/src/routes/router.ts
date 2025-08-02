@@ -1,5 +1,3 @@
-// app/server/routers/greeting.ts
-
 import { createTRPCRouter, publicProcedure } from '@/lib/trpc/config'
 import { protectedProcedure } from '@/lib/trpc/procedures/protectedProcedure'
 
@@ -8,7 +6,6 @@ export const testRouter = createTRPCRouter({
     return 'hello world'
   }),
   user: protectedProcedure.query(async ({ ctx }) => {
-    // return ctx.user
     return ctx.user
   })
 })

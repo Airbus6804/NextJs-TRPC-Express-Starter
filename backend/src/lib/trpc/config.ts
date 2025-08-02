@@ -14,22 +14,12 @@ export const createTRPCContext = async (opts: CreateExpressContextOptions) => {
 
   try{
 
-  const token = opts.req.headers['authorization']?.split(' ')[1] ?? opts.req.cookies['bearer_token']
-
-  const {payload} = await jwtVerify<JwtPayload>(token, JWKS, {
-    // issuer: process.env.JWKS_ISSUER,
-    // audience: process.env.JWKS_ISSUER,
-  })
-
-  user = payload;
+    const token = opts.req.headers['authorization']?.split(' ')[1] ?? opts.req.cookies['bearer_token']
+    const {payload} = await jwtVerify<JwtPayload>(token, JWKS)
+    user = payload;
   } catch (error) {
     console.error(error)
   }
-  // const authSession = await auth.api.getSession({
-  //   headers: fromNodeHeaders(opts.req.headers),
-  // })
-
-  
 
   const source = opts.req.headers['x-trpc-source'] ?? 'unknown'
   console.log('>>> tRPC Request from', source, 'by', user?.email)

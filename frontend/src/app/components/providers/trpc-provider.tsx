@@ -25,7 +25,6 @@ export function TrpcProvider({ children }: { children: React.ReactNode }) {
           fetch:  async (url, opts) => {
             const response = await fetch(url, {
               ...opts,
-              // credentials: 'include', // 🔐 for cookie-based auth
               headers: {
                 ...opts?.headers,
               },

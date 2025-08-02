@@ -20,11 +20,6 @@ export const authClient = createAuthClient({
         if (authToken) {
           Cookies.set("bearer_token", authToken);
         }
-        // else {
-        //   const cookies = await import('next/headers').then(mod => mod.cookies)
-        //   const resolvedCookies = await cookies()
-        //   resolvedCookies.set("bearer_token", authToken);
-        // }
       }
     },
   },

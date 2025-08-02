@@ -21,10 +21,6 @@ export const auth = betterAuth({
 
   plugins: [
     bearer(),
-    jwt({
-      jwt:{
-        expirationTime: '20s'
-      }
-    })
+    jwt()
   ]
 });

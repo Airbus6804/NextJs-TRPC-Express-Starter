@@ -4,8 +4,7 @@ import { createTRPCProxyClient, httpBatchLink, TRPCClient } from "@trpc/client";
 import superjson from "superjson";
 
 export function getBaseUrl() {
-  // if (typeof window !== 'undefined') return ''; // Client = relative
-  return process.env.NEXT_PUBLIC_BACKEND_URL ?? "http://localhost:4000"; // Server = absolute
+  return process.env.NEXT_PUBLIC_BACKEND_URL ?? "http://localhost:4000";
 }
 
 export function createTRPCClient(headers?: HeadersInit): TRPCClient<AppRouter> {
